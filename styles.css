@@ -88,11 +88,9 @@ nav .container {
 nav ul {
     display: flex;
     align-items: center;
+    gap: 30px;
 }
 
-nav ul li {
-    margin-left: 40px;
-}
 
 .nav-link {
     color: var(--clr-primary);
@@ -104,25 +102,26 @@ nav ul li {
 
 
 /* Header */
-.hero {
+.two-side {
     width: 48%;
 }
 
-.hero img {
+.two-side img {
     width: 100%;
     height: auto;
     background-size: cover;
     box-shadow: 0 0 10px rgb(231 227 228);
 }
 
-.hero-text {
+.text-side {
     padding-right: 5%;
 }
 
-.hero-text p {
+.text-side p {
     margin: 30px 0;
 }
 
+/* Dishes */
 #dishes {
     display: flex;
     flex-direction: column;
@@ -156,4 +155,14 @@ nav ul li {
 .dish img {
     width: 100%;
     border-radius: 20px;
+}
+
+/* Chefs section */
+#chef .text-side {
+    padding: 0;
+}
+
+#chef img {
+    padding-left: 5%;
+    box-shadow: none;
 }
