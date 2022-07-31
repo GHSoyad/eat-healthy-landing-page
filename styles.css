@@ -1,58 +1,109 @@
 /* Google Font */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 
+:root {
+    --clr-primary: rgb(49 146 84);
+    --clr-hover: rgb(82, 173, 54);
+}
+
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 body {
     font-family: 'Montserrat', sans-serif;
+    word-spacing: 3px;
 }
 
 .container,
 main {
     max-width: 1100px;
-    margin: 0 auto;
-}
-
-nav .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 30px 0;
 }
 
 .container {
     display: flex;
-
     align-items: center;
     justify-content: space-between;
+    margin: 0 auto;
 }
 
-nav ul {
-    display: flex;
+header,
+main {
+    margin: 60px auto;
 }
 
-ul li {
+li {
     list-style: none;
-    margin-left: 40px;
 }
 
 a {
     text-decoration: none;
     font-weight: bold;
+    display: inline-block;
+    transition: .3s;
+}
+
+a.btn {
+    color: white;
+    background-color: var(--clr-primary);
+    padding: 15px 30px;
+    border-radius: 35px;
+}
+
+a.btn:hover {
+    background-color: var(--clr-hover);
+}
+
+h1 {
+    font-size: 40px;
+    line-height: 50px;
+}
+
+h2 {
+    font-size: 32px;
+}
+
+h3 {
+    font-size: 24px;
+}
+
+p {
+    line-height: 25px;
+    font-size: 18px;
+}
+
+section {
+    padding-top: 40px;
+    margin-bottom: 60px;
+}
+
+/* Navbar */
+nav .container {
+    padding: 30px 0;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+}
+
+nav ul li {
+    margin-left: 40px;
 }
 
 .nav-link {
-    color: #339952;
+    color: var(--clr-primary);
 }
 
 .nav-link:hover {
-    color: #00d13f;
+    color: var(--clr-hover);
 }
 
+
+/* Header */
 .hero {
     width: 48%;
 }
@@ -61,8 +112,48 @@ a {
     width: 100%;
     height: auto;
     background-size: cover;
+    box-shadow: 0 0 10px rgb(231 227 228);
 }
 
 .hero-text {
     padding-right: 5%;
+}
+
+.hero-text p {
+    margin: 30px 0;
+}
+
+#dishes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 25px;
+}
+
+.dishes {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.dish {
+    width: 31%;
+    border-radius: 20px;
+    padding: 2%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    transition: .3s;
+}
+
+.dish:hover {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+.dish h3 {
+    margin: 20px 0;
+}
+
+.dish img {
+    width: 100%;
+    border-radius: 20px;
 }
