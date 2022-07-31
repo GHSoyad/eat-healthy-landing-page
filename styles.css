@@ -32,7 +32,7 @@ main {
 
 header,
 main {
-    margin: 60px auto;
+    margin: 80px auto;
 }
 
 li {
@@ -77,7 +77,7 @@ p {
 
 section {
     padding-top: 40px;
-    margin-bottom: 60px;
+    margin-bottom: 80px;
 }
 
 /* Navbar */
@@ -110,10 +110,9 @@ nav ul {
     width: 100%;
     height: auto;
     background-size: cover;
-    box-shadow: 0 0 10px rgb(231 227 228);
 }
 
-.text-side {
+header .text-side {
     padding-right: 5%;
 }
 
@@ -164,5 +163,38 @@ nav ul {
 
 #chef img {
     padding-left: 5%;
-    box-shadow: none;
+}
+
+/* Reviews */
+
+#reviews .text-side {
+    padding-left: 5%;
+}
+
+.review {
+    margin-top: 30px;
+}
+
+.reviewer,
+.rating {
+    display: flex;
+}
+
+.reviewer img {
+    width: 50px;
+}
+
+.reviewer-name {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.reviewer-info p,
+.rating p {
+    margin: 0;
+    margin-left: 30px;
+}
+
+.review>p {
+    text-align: justify;
 }
