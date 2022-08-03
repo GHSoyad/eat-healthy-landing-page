@@ -2,8 +2,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 
 :root {
-    --clr-primary: rgb(49 146 84);
-    --clr-hover: rgb(82, 173, 54);
+    --clr-primary: #309756;
+    --clr-secondary: #64bb47;
 }
 
 * {
@@ -39,24 +39,6 @@ li {
     list-style: none;
 }
 
-a {
-    text-decoration: none;
-    font-weight: bold;
-    display: inline-block;
-    transition: .3s;
-}
-
-a.btn {
-    color: white;
-    background-color: var(--clr-primary);
-    padding: 15px 30px;
-    border-radius: 35px;
-}
-
-a.btn:hover {
-    background-color: var(--clr-hover);
-}
-
 h1 {
     font-size: 40px;
     line-height: 50px;
@@ -75,14 +57,64 @@ p {
     font-size: 18px;
 }
 
+a {
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+    transition: .3s;
+}
+
+a.btn {
+    position: relative;
+    color: white;
+    background-image: linear-gradient(360deg, var(--clr-primary), var(--clr-secondary));
+    padding: 15px 30px;
+    border-radius: 35px;
+    z-index: 1;
+}
+
+a.btn::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: linear-gradient(180deg, var(--clr-primary), var(--clr-secondary));
+    padding: 15px 30px;
+    border-radius: 35px;
+    z-index: -1;
+    transition: opacity 0.3s linear;
+    opacity: 0;
+}
+
+a.btn:hover::before {
+    opacity: 1;
+}
+
 section {
-    padding-top: 40px;
-    margin-bottom: 80px;
+    padding-top: 60px;
+    margin-bottom: 100px;
+}
+
+.two-side {
+    width: 48%;
+}
+
+.two-side img {
+    width: 100%;
+    height: auto;
+    background-size: cover;
+    border-radius: 30px;
 }
 
 /* Navbar */
 nav .container {
     padding: 30px 0;
+}
+
+.nav-logo {
+    color: var(--clr-primary);
 }
 
 nav ul {
@@ -97,21 +129,11 @@ nav ul {
 }
 
 .nav-link:hover {
-    color: var(--clr-hover);
+    color: var(--clr-secondary);
 }
 
 
 /* Header */
-.two-side {
-    width: 48%;
-}
-
-.two-side img {
-    width: 100%;
-    height: auto;
-    background-size: cover;
-}
-
 header .text-side {
     padding-right: 5%;
 }
@@ -120,13 +142,13 @@ header .text-side {
     margin: 30px 0;
 }
 
-/* Dishes */
+/* Dishes section */
 #dishes {
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    gap: 25px;
+    gap: 20px;
 }
 
 .dishes {
@@ -156,17 +178,34 @@ header .text-side {
     border-radius: 20px;
 }
 
+/* Fresh section */
+#fresh .text-side {
+    padding-left: 5%;
+}
+
 /* Chefs section */
 #chef .text-side {
     padding: 0;
+}
+
+#chef li {
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+#chef li .fa-check {
+    font-size: .7rem;
+    color: white;
+    background-color: var(--clr-secondary);
+    padding: 5px;
+    border-radius: 5px;
 }
 
 #chef img {
     padding-left: 5%;
 }
 
-/* Reviews */
-
+/* Reviews section */
 #reviews .text-side {
     padding-left: 5%;
 }
@@ -184,9 +223,9 @@ header .text-side {
     width: 50px;
 }
 
-.reviewer-name {
+.reviewer-name,
+.rating {
     font-weight: bold;
-    margin-bottom: 10px;
 }
 
 .reviewer-info p,
@@ -197,4 +236,10 @@ header .text-side {
 
 .review>p {
     text-align: justify;
+}
+
+.fa-star,
+.fa-star-half-stroke {
+    color: rgb(255, 151, 40);
+    vertical-align: middle;
 }
