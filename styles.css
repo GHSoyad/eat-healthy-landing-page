@@ -112,9 +112,14 @@ section {
     border-radius: 30px;
 }
 
+.text-side p {
+    margin: 30px 0;
+}
+
 /* Navbar */
 nav .container {
     padding: 30px 0;
+    gap: 20px;
 }
 
 .nav-logo {
@@ -142,10 +147,6 @@ header .text-side {
     padding-right: 5%;
 }
 
-.text-side p {
-    margin: 30px 0;
-}
-
 /* Dishes section */
 #dishes {
     display: flex;
@@ -159,6 +160,7 @@ header .text-side {
     display: flex;
     justify-content: space-between;
     margin-top: 20px;
+    gap: 25px;
 }
 
 .dish {
@@ -183,7 +185,7 @@ header .text-side {
 }
 
 /* Fresh section */
-#fresh .text-side {
+.fresh .text-side {
     padding-left: 5%;
 }
 
@@ -199,6 +201,7 @@ header .text-side {
     display: flex;
     justify-content: space-between;
     margin-top: 20px;
+    gap: 25px;
 }
 
 .popular-dish {
@@ -252,7 +255,7 @@ header .text-side {
 }
 
 /* Chefs section */
-#chef .text-side {
+.chef .text-side {
     padding: 0;
 }
 
@@ -269,16 +272,16 @@ header .text-side {
     border-radius: 5px;
 }
 
-#chef img {
+.chef .image-side {
     padding-left: 5%;
 }
 
 /* Reviews section */
-#reviews .text-side {
+.reviews .text-side {
     padding-left: 5%;
 }
 
-#reviews .image-side {
+.reviews .image-side {
     padding: 40px 40px 40px 0;
 }
 
@@ -337,7 +340,7 @@ header .text-side {
     border-radius: 40px;
 }
 
-#contact .two-side {
+.contact .two-side {
     width: 30%;
 }
 
@@ -433,6 +436,8 @@ footer a:hover {
     margin-top: 30px;
 }
 
+
+/* Responsive for large devices */
 @media screen and (max-width: 1200px) {
 
     nav,
@@ -442,13 +447,84 @@ footer a:hover {
     }
 }
 
+/* Responsive for medium devices */
 @media screen and (max-width: 992px) {
+    body {
+        text-align: center;
+    }
+
+    header,
+    main,
+    section {
+        margin: 40px auto;
+    }
+
     .container {
         flex-wrap: wrap;
         align-items: center;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .text-side p {
+        margin: 20px 0;
     }
 
     .two-side {
         width: 90%;
+    }
+
+    .two-side.text-side {
+        padding: 0;
+    }
+
+    .two-side.image-side {
+        padding: 0;
+    }
+
+    .two-side.image-side img {
+        width: 80%;
+    }
+
+    nav .container {
+        justify-content: space-between;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        gap: 15px 20px;
+        justify-content: space-between;
+    }
+
+    .popular-dish-details {
+        text-align: left;
+    }
+
+    .reviews .container {
+        flex-direction: column-reverse;
+        gap: 20px;
+    }
+
+    .reviewer-info p,
+    .rating p {
+        margin: 0;
+        margin-left: 30px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    nav .container {
+        justify-content: center;
+    }
+
+    .dishes,
+    .popular-dishes {
+        flex-wrap: wrap;
+        gap: 25px 4%;
+    }
+
+    .dish,
+    .popular-dish {
+        width: 48%;
     }
 }
