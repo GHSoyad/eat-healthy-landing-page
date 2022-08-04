@@ -437,7 +437,7 @@ footer a:hover {
 }
 
 
-/* Responsive for large devices */
+/* Responsive for extra large devices */
 @media screen and (max-width: 1200px) {
 
     nav,
@@ -447,7 +447,7 @@ footer a:hover {
     }
 }
 
-/* Responsive for medium devices */
+/* Responsive for large devices */
 @media screen and (max-width: 992px) {
     body {
         text-align: center;
@@ -512,6 +512,7 @@ footer a:hover {
     }
 }
 
+/* Responsive for medium devices */
 @media screen and (max-width: 768px) {
     nav .container {
         justify-content: center;
@@ -526,5 +527,47 @@ footer a:hover {
     .dish,
     .popular-dish {
         width: 48%;
+    }
+
+    footer .container {
+        padding: 0 5%;
+    }
+}
+
+/* Responsive for small devices */
+@media screen and (max-width: 576px) {
+
+    nav,
+    header,
+    main,
+    footer .container {
+        padding: 0 3%;
+    }
+
+    nav .container {
+        padding: 15px 0;
+    }
+
+    nav ul {
+        justify-content: center;
+    }
+
+    .two-side.image-side img {
+        width: 100%;
+    }
+
+    .dishes,
+    .popular-dishes {
+        justify-content: center;
+    }
+
+    .dish,
+    .popular-dish {
+        width: 80%;
+    }
+
+    .popular-dish-details {
+
+        gap: 5%;
     }
 }
